@@ -1,0 +1,127 @@
+@import "../../../assets/scss/mixin.scss";
+.header {
+  $box-shadow: 0 5px 16px 9px rgba(0, 0, 0, 0.1);
+  $brown: #751c1c;
+  $main-side-padding: 80px;
+  &-main {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    width: 100%;
+    align-items: center;
+    gap: 10px;
+    &__logo {
+      text-align: left;
+      img {
+        height: 80px;
+      }
+    }
+    padding: 0px $main-side-padding;
+
+    &__actions {
+      display: grid;
+      grid-template-columns: minmax(80px, 120px) 40px 40px 40px;
+      justify-content: end;
+      gap: 20px;
+    }
+
+    &__round-link {
+      width: 40px;
+      height: 40px;
+      background-color: white;
+      @include flex;
+      border-radius: 50%;
+      box-shadow: $box-shadow;
+      color: black;
+      border: 1px solid #e7e7e7;
+      cursor: pointer;
+      transition: all ease 0.3s;
+
+      &:hover {
+        background-color: gray;
+        color: white;
+      }
+    }
+
+    &__button {
+      height: 40px;
+      padding: 0 20px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: small;
+      background-color: white;
+      outline: none;
+      box-shadow: none;
+      border: 1px solid $brown;
+      border-radius: 999px;
+      color: $brown;
+      box-shadow: $box-shadow;
+      cursor: pointer;
+      transition: all ease 0.3s;
+
+      &:hover {
+        background-color: $brown;
+        color: white;
+      }
+    }
+
+    &__search {
+      position: relative;
+      input {
+        height: 50px;
+        width: 100%;
+        border: none;
+        box-shadow: $box-shadow;
+        border-radius: 999px;
+        padding: 10px 20px;
+        padding-left: 60px;
+        border: 2px solid transparent;
+        text-align: center;
+        font-size: 16px;
+        &:focus {
+          outline: none;
+          border: 2px solid $brown;
+
+          & + span {
+            color: $brown;
+          }
+        }
+      }
+
+      span {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        @include flex;
+        width: 50px;
+        font-size: 30px;
+      }
+    }
+  }
+
+  &-shipping {
+    background-color: #8b5b5b;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px 20px;
+    color: white;
+    text-align: center;
+  }
+
+  &-social-n-currency {
+    @include flex(center, end);
+    padding: 20px $main-side-padding;
+    margin-left: auto;
+  }
+
+  &-socials {
+    display: grid;
+    grid-template-columns: repeat(3, 30px);
+    grid-gap: 15px;
+    &__icon {
+      @include flex;
+      width: 30px;
+      height: 30px;
+      box-shadow: 0 5px 16px 2px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+.navWrap {
+  z-index: 1000;
+}
+.w-100 {
+  width: 100%;
+}
+.nav-join-btn {
+  &:hover {
+    background-color: white !important;
+    color: #2c5de5 !important;
+    border: 1px solid #2c5de5;
+  }
+}

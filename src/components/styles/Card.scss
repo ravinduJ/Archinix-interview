@@ -1,0 +1,9 @@
+.card-heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 20px;
+  &-logo {
+    width: 30px;
+  }
+}

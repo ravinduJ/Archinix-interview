@@ -1,0 +1,57 @@
+.swiper{
+    position: relative !important;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: #ffffff;
+  z-index: 100;
+  border-radius: 50%;
+  top: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 6px 1px #0000002b;
+  transform: translateY(-50%);
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
+  &::after {
+    content: "";
+    background-image: url(../images/right-arrow.png);
+    background-size: contain;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    text-align: center;
+    left: 10px;
+    @media (max-width: 900px) {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  @media (max-width: 900px) {
+    width: 35px;
+    height: 35px;
+  }
+  &.swiper-button-disabled {
+    display: none;
+  }
+}
+.swiper-button-next {
+  right: 20px;
+  @media (max-width: 900px) {
+    right: 17px;
+  }
+}
+.swiper-button-prev {
+  left: 20px;
+  @media (max-width: 900px) {
+    left: 17px;
+  }
+  &::after {
+    transform: rotate(180deg);
+  }
+}

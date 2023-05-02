@@ -1,0 +1,40 @@
+.carousel-wrap {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: center;
+    &-inner {
+      padding-bottom: 50px;
+      width: 100%;
+      text-align: center;
+      @media (max-width: 900px) {
+        padding-bottom: 20px;
+      }
+      @media (max-width: 600px) {
+        padding: 0 20px 20px;
+      }
+      .carousel-input {
+        &::before, &::after {
+          display: none;
+        }
+      }
+    }
+  }
+  .carousel-back-bg {
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    object-fit: cover;
+  }
+  .profile-arrow-icon {
+    img {
+      width: 16px;
+      padding-left: 12px;
+      margin-top: 4px;
+    }
+  }
+  

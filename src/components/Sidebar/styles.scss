@@ -1,0 +1,70 @@
+@import "../../assets/scss/mixin.scss";
+
+.sidebar {
+  background-color: #fff;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 80vw;
+  height: 100vh;
+  transition: all ease 0.4s;
+  opacity: 0;
+  display: none;
+  max-width: 300px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 3;
+  @media only screen and (max-width: 768px) {
+    opacity: 1;
+    display: block;
+    transform: translateX(-100%);
+  }
+
+  &.isOpen {
+    @media only screen and (max-width: 768px) {
+      transform: translateX(0);
+    }
+  }
+
+  &-icon {
+    width: 30px;
+    height: 30px;
+    background-color: rgb(22, 34, 22);
+    @include flex;
+    color: white;
+    border-radius: 50%;
+    display: none;
+    cursor: pointer;
+
+    @media only screen and (max-width: 768px) {
+      display: flex;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    color: gray;
+    transition: all ease 0.4s;
+    font-size: 18px;
+    cursor: pointer;
+  }
+
+  .header-main__logo {
+    img {
+      height: 80px;
+    }
+  }
+}
+
+.hide-in-mobile {
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
+}
+
+.hide-in-web {
+  @media only screen and (min-width: 767px) {
+    display: none;
+  }
+}
